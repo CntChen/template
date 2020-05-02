@@ -1,4 +1,4 @@
-# Tempalte
+# Template
 > webpack4 + react + typescript template
 
 ## Usage
