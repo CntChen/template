@@ -60,7 +60,6 @@ module.exports = (option) => {
             new HtmlWebpackPlugin({
                 template: path.join(pagePath, '/index.html'),
                 filename: 'index.html',
-                excludeChunks: ['send'],
             }),
         ],
     };
