@@ -10,9 +10,7 @@ const preWorkConfig = undefined;
 /**
  * 资源入口打包配置
  */
-const webpackConfig = getWebpackConfig({
-    platform: 'pc',
-});
+const webpackConfig = getWebpackConfig();
 
 
 function getBuildFinishTime() {

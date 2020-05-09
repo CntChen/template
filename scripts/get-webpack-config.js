@@ -3,7 +3,7 @@ const path = require('path');
 const webpackMerge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const { isProduction, outputPath, projectDir, platform, entryBasePath, HASH } = require('./config');
+const { isProduction, outputPath, entryBasePath, HASH } = require('./config');
 const baseWebpackConfig = require('./base-webpack-config');
 const entryList = require('./get-entry-list');
 
@@ -32,14 +32,6 @@ const HtmlWebpackPluginList = entryList.reduce((pre, cur) => {
 }, []);
 
 module.exports = (option) => {
-    if (!option || !option.platform) {
-        throw new Error('参数错误');
-    }
-
-    if (platform !== 'all' && option.platform !== platform) {
-        return undefined;
-    }
-
     const config = {
         entry,
         output: {

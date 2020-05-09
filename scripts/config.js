@@ -20,11 +20,6 @@ const outputPath = path.join(projectDir, './dist');
 const isProduction = process.env.NODE_ENV === 'production';
 
 /**
- * 构建的的平台模式
- */
-const platform = process.env.PLAT_FORM.toLowerCase();
-
-/**
  * 生成页面的 html 资源位置
  */
 const entryBasePath = './src/template/';
@@ -33,7 +28,6 @@ module.exports = {
     projectDir,
     outputPath,
     isProduction,
-    platform,
     entryBasePath,
     HASH: '-[hash:10]',
 };
