@@ -1,13 +1,17 @@
 const webpack = require('webpack');
 const execSync = require('child_process').execSync;
 const { isProduction, outputPath } = require('./config');
-const getWorkerConfig = require('./get-webpack-config');
+const getWebpackConfig = require('./get-webpack-config');
 
-const pcConfig = getWorkerConfig({
+/**
+ * 一些前置构建的配置, 比如 lib 文件复制到发布目录等
+ */
+const preWorkConfig = undefined;
+/**
+ * 资源入口打包配置
+ */
+const webpackConfig = getWebpackConfig({
     platform: 'pc',
-});
-const mobileConfig = getWorkerConfig({
-    platform: 'mobile',
 });
 
 
@@ -49,14 +53,14 @@ const statFunc = (cb) => {
 execSync(`rm -rf ${outputPath}`);
 
 if (isProduction) {
-    const compiler = webpack([pcConfig, mobileConfig].filter(c => !!c));
+    const compiler = webpack([preWorkConfig, webpackConfig].filter(c => !!c));
     compiler.run(
         statFunc((err, stats) => {
             console.log('dist: 构建完成', getBuildFinishTime());
         })
     );
 } else {
-    const compiler = webpack([pcConfig, mobileConfig].filter(c => !!c));
+    const compiler = webpack([preWorkConfig, webpackConfig].filter(c => !!c));
     compiler.watch(
         {
             ignored: ['node_modules', 'script'],
