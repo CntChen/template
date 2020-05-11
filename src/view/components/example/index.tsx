@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import './index.less';
+
 interface IProp {
     title: string;
 }
@@ -10,7 +12,9 @@ export default function Example(props: IProp) {
     return (
         <div>
             <div>Title: {props.title}</div>
-            <p>You clicked {count} times</p>
+            <p className="count-number">
+                You clicked <span>{count}</span> times
+            </p>
             <button onClick={() => setCount(count + 1)}>Click me</button>
         </div>
     );
