@@ -35,8 +35,9 @@ module.exports = (option) => {
     const config = {
         entry,
         output: {
-            filename: isProduction ? `[name]${HASH}.js` : '[name].js',
             path: outputPath,
+            filename: isProduction ? `[name]${HASH}.js` : '[name].js',
+            chunkFilename: isProduction ? `[name]${HASH}.js` : '[name].js',
         },
         plugins: [
             ...HtmlWebpackPluginList,

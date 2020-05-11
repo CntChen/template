@@ -29,5 +29,5 @@ module.exports = {
     outputPath,
     isProduction,
     entryBasePath,
-    HASH: '-[hash:10]',
+    HASH: '-[contenthash:10]',
 };
