@@ -2,7 +2,7 @@
     "compilerOptions": {
         "jsx": "preserve",
         "target": "es6",
-        "module": "es6",
+        "module": "esnext",
         "lib": [
             "es6",
             "dom"
@@ -18,7 +18,7 @@
         "declaration": false,
         "outDir": "dist",
         "sourceMap": true,
-        "removeComments": true,
+        "removeComments": false,
         "forceConsistentCasingInFileNames": true,
         "moduleResolution": "node",
         "baseUrl": "./",
