@@ -50,8 +50,10 @@
         "eslint": "^6.8.0",
         "eslint-config-alloy": "^3.7.1",
         "eslint-plugin-react": "^7.19.0",
+        "file-loader": "^6.0.0",
         "html-webpack-plugin": "^4.0.4",
         "husky": "^4.2.3",
+        "image-webpack-loader": "^6.0.0",
         "less-loader": "^6.1.0",
         "lint-staged": "^10.1.2",
         "mini-css-extract-plugin": "^0.9.0",
@@ -61,6 +63,7 @@
         "stylelint-config-standard": "^20.0.0",
         "ts-loader": "^6.2.2",
         "typescript": "^3.8.3",
+        "url-loader": "^4.1.0",
         "webpack": "^4.42.1",
         "webpack-merge": "^4.2.2"
     },
