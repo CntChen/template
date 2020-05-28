@@ -21,6 +21,8 @@ module.exports = {
     },
     devtool: sourceMap,
     optimization: {
+        // chunk 命名, 方便构建是看模块信息
+        namedChunks: true,
         minimize: isProduction,
     },
     module: {
