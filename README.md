@@ -19,6 +19,8 @@ Resource will lay in `./dist`.
 * open
 ```sh
 $ http-server -c0 ./dist
+Available on:
+  http://127.0.0.1:8080
 ```
 Browser url usually is: http://127.0.0.1:8080
 
