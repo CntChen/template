@@ -23,7 +23,7 @@ module.exports = {
     ],
     rules: {
         // 采用 4 空格的缩进
-        "indent": [1, 4],
-        "@typescript-eslint/indent": [1, 4], 
+        indent: [1, 4],
+        '@typescript-eslint/indent': [1, 4],
     },
 };

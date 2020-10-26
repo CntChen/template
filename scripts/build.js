@@ -15,7 +15,7 @@ const webpackConfig = getWebpackConfig();
 
 function getBuildFinishTime() {
     function addZero(num) {
-        return ('0' + num).slice(-2);
+        return `0${num}`.slice(-2);
     }
 
     const now = new Date();
