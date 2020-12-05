@@ -29,11 +29,11 @@
         }
     },
     "include": [
-        "src/**/*"
+        "src/**/*",
+        "test/**/*"
     ],
     "exclude": [
         "node_modules",
-        "**/*.test.*"
     ],
     "typeRoots": [
         "./src/typings",

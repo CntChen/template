@@ -1,5 +1,5 @@
 # Template
-> webpack4 + react + typescript template
+> webpack4 + react + typescript template + jest
 
 ## Usage
 * clone and init
@@ -23,5 +23,22 @@ Available on:
   http://127.0.0.1:8080
 ```
 Browser url usually is: http://127.0.0.1:8080
+
+## Test
+
+```sh
+$ npm run test
+```
+
+* test coverage
+
+```sh
+$ npm run test:coverage
+```
+
+then open coverage file from browser:
+```sh
+$ npx http-server -c0 ./coverage/lcov-report
+```
 
 ## EOF
