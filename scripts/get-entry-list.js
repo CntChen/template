@@ -6,7 +6,7 @@
 
 const path = require('path');
 
-const { getAllFiles }= require('./utils');
+const { getAllFiles } = require('./utils');
 const { projectDir, entryBasePath } = require('./config');
 
 const entryPath = path.join(projectDir, entryBasePath);

@@ -97,7 +97,7 @@ module.exports = {
                     {
                         loader: 'image-webpack-loader',
                         options: {
-                          disable: !isProduction,
+                            disable: !isProduction,
                         },
                     },
                 ],

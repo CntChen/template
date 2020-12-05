@@ -4,7 +4,7 @@
  * @Date: 2020-05-09
  */
 
-const fs= require('fs');
+const fs = require('fs');
 const path = require('path');
 
 /**
@@ -14,7 +14,7 @@ function getAllFiles(root) {
     let res = [];
     const files = fs.readdirSync(root);
 
-    files.forEach(function (file) {
+    files.forEach(function(file) {
         const pathname = path.join(root, file);
         const stat = fs.lstatSync(pathname);
 
