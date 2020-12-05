@@ -5,6 +5,7 @@
     "main": "index.js",
     "scripts": {
         "test": "cross-env NODE_ENV=test jest -c script/test/base.js",
+        "test:lint-staged": "cross-env NODE_ENV=test jest -c script/test/base.js --findRelatedTests",
         "test:watch": "cross-env NODE_ENV=test jest -c script/test/base.js --watch",
         "test:coverage": "cross-env NODE_ENV=test jest -c script/test/base.js --coverage",
         "unit:utils": "cross-env NODE_ENV=test jest -c script/test/unit/src/common/utils.js",
@@ -80,7 +81,8 @@
             "prettier --write"
         ],
         "src/**/*.{js,ts,tsx}": [
-            "eslint --fix"
+            "eslint --fix",
+            "npm run test:lint-staged"
         ],
         "src/**/*.{css,less}": [
             "stylelint --fix"
