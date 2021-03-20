@@ -2,10 +2,10 @@
 const path = require('path');
 const webpackMerge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 const { isProduction, outputPath, entryBasePath, HASH } = require('./config');
 const baseWebpackConfig = require('./base-webpack-config');
 const entryList = require('./get-entry-list');
+const AlloyWorkerPlugin = require('../src/alloy-worker-plugin/alloy-worker-plugin');
 
 /**
  * 项目构建入口
@@ -41,6 +41,7 @@ module.exports = (option) => {
         },
         plugins: [
             ...HtmlWebpackPluginList,
+            new AlloyWorkerPlugin({}),
         ],
     };
 

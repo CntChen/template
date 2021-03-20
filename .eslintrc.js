@@ -9,6 +9,7 @@ module.exports = {
         'alloy/typescript'
     ],
     globals: {
+        __WORKER__: 'readonly'
     },
     parser: '@typescript-eslint/parser',
     parserOptions: {

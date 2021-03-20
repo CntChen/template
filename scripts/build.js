@@ -32,6 +32,7 @@ const statFunc = (cb) => {
             console.log(
                 stats.toString({
                     all: false,
+                    assets: true,
                     chunks: true,
                     errors: true,
                     errorDetails: false,
